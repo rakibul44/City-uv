@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Request Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./style.css">
+    <!-- favicon -->
+    <link rel="icon" href="./images/logo.png">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Submit a Request</h2>
+        <form action="#">
+            <div class="form-group d-flex">
+                <!-- <label>Employee Type*</label> -->
+                <input type="radio" name="employeeType" value="Admin" id="admin" class="circle">
+                <label for="admin">Self</label>
+                <input type="radio" name="employeeType" value="Faculty" id="faculty" class="circle">
+                <label for="faculty">Others</label>
+            </div>
+
+            <div class="form-group">
+                <label for="employeeID">Employee ID*</label>
+                <input type="number" id="employeeID" placeholder="Enter Employee ID" required>
+            </div>
+            
+
+            <div class="form-group">
+                <!-- <label for="fullName">Full Name*</label> -->
+                <input type="text" id="fullName" placeholder="Full Name">
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="departmentName">Designation*</label> -->
+                <input type="text" id="departmentName" placeholder="Designation">
+            </div>
+            
+            <div class="form-group">
+                <!-- <label for="departmentName">Department Name*</label> -->
+                <input type="text" id="departmentName" placeholder="Department Name">
+            </div>
+
+            <div class="form-group">
+                <label for="problemType">Problem Type*</label>
+                <select id="problemType" required>
+                    <option value="" disabled selected>Select Problem Type</option>
+                    <option value="Technical Support">Profile or content update on website related problems</option>
+                    <option value="Software Issue">Problems on office mail create or access</option>
+                    <option value="Hardware Issue">Application or Software problems</option>
+                    <option value="Network Issue">Hardware problems</option>
+                    <option value="Network Issue">Network problems</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+
+            <div class="form-group">
+                <label for="description">Description*</label>
+                <textarea id="description" rows="4" placeholder="Please enter the details of your request. A member of our support staff will respond as soon as possible." required></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-submit">Submit Request</button>
+                <button type="reset" class="btn btn-reset">Reset Request</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
